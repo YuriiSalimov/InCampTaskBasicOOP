@@ -39,7 +39,7 @@ public class SimpleRefrigerator implements Refrigerator {
     }
 
     protected void freeze() {
-        while (isUnfrozen()) {
+        while (isWorked() && isUnfrozen()) {
             changeTemperature(-1);
         }
     }
